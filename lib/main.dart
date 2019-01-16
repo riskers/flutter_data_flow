@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'search.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,9 +11,9 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Data Flow'),
         ),
-        body: Center(
-          child: Text('this is flutter'),
-        )
+        body: Container(
+          child: Search(text: 'Hi'),
+        ),
       ),
     );
   }
