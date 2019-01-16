@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'search.dart';
+import 'userlist.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,8 +12,13 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Data Flow'),
         ),
-        body: Container(
-          child: Search(text: 'Hi'),
+        body: Column(
+          children: <Widget>[
+            Search(),
+            Expanded(
+              child: UserList(),
+            )
+          ],
         ),
       ),
     );

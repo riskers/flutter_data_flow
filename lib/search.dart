@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:dio/dio.dart';
 
 class Search extends StatefulWidget {
-  Search({this.text});
-
-  final String text;
+  Search();
 
   @override
   State<StatefulWidget> createState() {
@@ -14,8 +13,10 @@ class Search extends StatefulWidget {
 class _SearchState extends State<Search> {
   final editController = TextEditingController();
 
-  void _submit(String input) {
-    print(input);
+  void _submit(String input) async {
+    Dio dio = Dio();
+    Response response = await dio.get('https://api.github.com/search/users?q=$input&page=1');
+    print(response);
   }
 
   @override
