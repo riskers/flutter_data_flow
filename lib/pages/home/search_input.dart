@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 
-class Search extends StatefulWidget {
-  Search();
+class SearchInput extends StatefulWidget {
+  SearchInput();
 
   @override
   State<StatefulWidget> createState() {
-    return _SearchState();
+    return _SearchInputState();
   }
 }
 
-class _SearchState extends State<Search> {
+class _SearchInputState extends State<SearchInput> {
   final editController = TextEditingController();
 
   void _submit(String input) async {
