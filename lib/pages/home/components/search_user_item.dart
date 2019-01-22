@@ -22,7 +22,7 @@ class SearchUserItem extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (_) => SearchResult()),
+          MaterialPageRoute(builder: (_) => SearchResult(username: username)),
         );
       },
     );
