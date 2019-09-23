@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import './components/search_input.dart';
@@ -64,15 +66,14 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('data flow'),
-      ),
-      body: Column(
-        children: <Widget>[
-          SearchInput(onSearch),
-          _renderContent(),
-        ],
-      )
-    );
+        appBar: AppBar(
+          title: Text('data flow'),
+        ),
+        body: Column(
+          children: <Widget>[
+            SearchInput(onSearch),
+            _renderContent(),
+          ],
+        ));
   }
 }
